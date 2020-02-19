@@ -173,7 +173,7 @@ func TestCompactionPickerTargetLevel(t *testing.T) {
 				if c == nil {
 					return "no compaction"
 				}
-				return fmt.Sprintf("startLevel: %d, outputLevel: %d", c.startLevel, c.outputLevel)
+				return fmt.Sprintf("L%d->L%d", c.startLevel, c.outputLevel)
 			default:
 				return fmt.Sprintf("unknown command: %s", d.Cmd)
 			}
